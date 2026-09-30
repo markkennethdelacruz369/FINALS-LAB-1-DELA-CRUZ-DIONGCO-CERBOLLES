@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding and responsive viewport setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CCS114 - Finals Lab 1 | Score Evaluator</title>
+
+  <!-- External stylesheet for layout and design -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Page Header ===== -->
+  <header class="site-header">
+    <h1>Student Score Evaluator</h1>
+    <p class="subtitle">CCS114 - Web Technologies | Finals Laboratory 1</p>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container">
+
+    <!-- Intro section: explains what the program does and starts the evaluation -->
+    <section class="intro" aria-labelledby="intro-heading">
+      <h2 id="intro-heading">About this Program</h2>
+      <p>
+        This page asks for your name and score through pop-up dialogs,
+        confirms whether you want to proceed, then evaluates your score
+        using JavaScript conditional branching and displays the result below.
+      </p>
+
+      <!-- Clicking this button triggers runEvaluation() in script.js -->
+      <button id="startBtn" type="button">Start Evaluation</button>
+    </section>
+
+    <!-- Result section: JavaScript injects the final result here -->
+    <section class="result" aria-labelledby="result-heading">
+      <h2 id="result-heading">Result</h2>
+
+      <!--
+        aria-live="polite" lets screen readers announce updates
+        automatically whenever script.js changes this element's content
+      -->
+      <article id="resultDisplay" class="result-card" aria-live="polite">
+        <p class="placeholder">No result yet. Click "Start Evaluation" to begin.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ===== Page Footer ===== -->
+  <footer class="site-footer">
+    <p>University of Cabuyao - College of Computing Studies</p>
+  </footer>
+
+  <!-- JavaScript logic (alert/prompt/confirm, validation, evaluation) -->
+  <script src="script.js"></script>
+</body>
+</html>
